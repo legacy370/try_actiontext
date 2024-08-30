@@ -1,0 +1,3 @@
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=Strainer-Campsite-Pumice9
+POSTGRES_DB=try_actiontext_development

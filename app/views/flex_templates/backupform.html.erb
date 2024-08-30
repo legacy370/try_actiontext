@@ -1,0 +1,80 @@
+<%= form_with(model: flex_template) do |form| %>
+  <% if flex_template.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(flex_template.errors.count, "error") %> prohibited this flex_template from being saved:</h2>
+
+      <ul>
+        <% flex_template.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class='field'>
+    <%= form.label :body %>
+    <%= form.text_area :body %>
+  </div>
+
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+<script type="importmap">
+  {
+    "imports": {
+      "ckeditor5": "https://cdn.ckeditor.com/ckeditor5/43.0.0/ckeditor5.js",
+      "ckeditor5/": "https://cdn.ckeditor.com/ckeditor5/43.0.0/",
+      "ckeditor5-premium-features": "https://cdn.ckeditor.com/ckeditor5-premium-features/43.0.0/ckeditor5-premium-features.js",
+      "ckeditor5-premium-features/": "https://cdn.ckeditor.com/ckeditor5-premium-features/43.0.0/"
+    }
+  }
+</script>
+<script type="module">
+    import {
+        ClassicEditor,
+        Heading,
+        Essentials,
+        Bold,
+        Italic,
+        Font,
+        Paragraph,
+        Link,
+        List,
+        Image,
+        ImageToolbar,
+        LinkImage
+    } from 'ckeditor5';
+
+    ClassicEditor
+        .create( document.querySelector( '#flex_template_body' ), {
+        image: {
+            toolbar: [ 'toggleImageCaption', 'imageTextAlternative', 'ckboxImageEdit' ]
+        },
+          cloudServices: {
+			      tokenUrl: 'https://shalomcloud.online/public/assets',
+			      uploadUrl: 'https://112888.cke-cs.com/easyimage/upload/'
+		      },
+            plugins: [ Essentials, Heading, Bold, Italic, Font, Paragraph, Link, List, Image, ImageToolbar, LinkImage ],
+            toolbar: {
+                items: [
+                    'undo', 'redo', '|', 'bold', 'italic', '|',
+                    'heading', 
+                    'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor',
+                    'link',
+                    'bulletedList',
+                    'numberedList',
+                    'insertImage'
+                ]
+            }
+        } )
+        .then( /* ... */ )
+        .catch( /* ... */ );
+</script>
+

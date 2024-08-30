@@ -1,0 +1,18 @@
+current directory: /usr/src/app/vendor/bundle/ruby/3.2.0/gems/racc-1.8.1/ext/racc/cparse
+/usr/local/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /usr/src/app/vendor/bundle/ruby/3.2.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20240830-12-irosom sitelibdir\=./.gem.20240830-12-irosom clean
+
+current directory: /usr/src/app/vendor/bundle/ruby/3.2.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20240830-12-irosom sitelibdir\=./.gem.20240830-12-irosom
+compiling cparse.c
+linking shared-object racc/cparse.so
+
+current directory: /usr/src/app/vendor/bundle/ruby/3.2.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20240830-12-irosom sitelibdir\=./.gem.20240830-12-irosom install
+/usr/bin/install -c -m 0755 cparse.so ./.gem.20240830-12-irosom/racc
+
+current directory: /usr/src/app/vendor/bundle/ruby/3.2.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20240830-12-irosom sitelibdir\=./.gem.20240830-12-irosom clean

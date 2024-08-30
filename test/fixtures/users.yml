@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  first_name: Mickey
+  last_name: Mantle
+
+two:
+  first_name: Hector
+  last_name: Lopez

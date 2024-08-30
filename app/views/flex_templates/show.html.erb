@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @flex_template.name %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @flex_template.body %>
+</p>
+<p><strong>The News:</strong>
+<%= @flex_template.the_news %>
+</p>
+
+<%= link_to 'Edit', edit_flex_template_path(@flex_template) %> |
+<%= link_to 'Back', flex_templates_path %>
