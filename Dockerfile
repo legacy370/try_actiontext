@@ -24,7 +24,7 @@ RUN bundle config set --local path "vendor/bundle" && \
   bundle install --jobs 4 --retry 3
 
 # Set a random secret key base so we can precompile assets.
-ENV SECRET_KEY_BASE airport_gap_secret_key_base
+# ENV SECRET_KEY_BASE airport_gap_secret_key_base
 
 # Set up Node.js and Yarn package repositories.
 RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
@@ -53,6 +53,14 @@ RUN bundle config set --local path "vendor/bundle"
 
 # Copy everything from the build stage, including gems and precompiled assets.
 COPY --from=build /usr/src/app /usr/src/app/
+RUN apt-get update -yqq && \
+  apt-get install -yqq --no-install-recommends \
+  imagemagick \
+  libpq-dev \
+  libvips \
+  postgresql-client \
+  postgresql-contrib \
+  vim
 
 EXPOSE 3000
 

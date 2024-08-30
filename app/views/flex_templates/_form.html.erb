@@ -119,8 +119,8 @@ import { ExportPdf, ExportWord, ImportWord, MultiLevelList } from 'ckeditor5-pre
  * Please update the following values with your actual tokens.
  * Instructions on how to obtain them: https://ckeditor.com/docs/trial/latest/guides/real-time/quick-start.html
  */
-const LICENSE_KEY = 'find a way to secure these';
-const CKBOX_TOKEN_URL = 'find a way to secure these';
+const LICENSE_KEY = '<%= Rails.application.credentials.CKEDITOR_LICENSE_KEY %>'
+const CKBOX_TOKEN_URL = '<%= Rails.application.credentials.CKBOX_TOKEN_URL %>'
 
 const editorConfig = {
 	toolbar: {
